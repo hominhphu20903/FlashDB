@@ -1,11 +1,15 @@
 package com.phuhm.flashalertdb.screen.light
 
+import android.animation.ValueAnimator
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.SeekBar
 import androidx.activity.viewModels
 import com.phuhm.flashalertdb.base.BaseActivity
+import com.phuhm.flashalertdb.controller.LedController
 import com.phuhm.flashalertdb.data.model.Flash
 import com.phuhm.flashalertdb.databinding.ActivityFlashLightBinding
 import com.phuhm.flashalertdb.utils.TimeUtils
@@ -55,6 +59,7 @@ class FlashLightActivity : BaseActivity<ActivityFlashLightBinding>() {
     private fun handleEvents() {
         binding.btnTest.setOnClickListener {
             Log.d("00000000000000", "handleEvents: $flashTypeLight")
+            LedController().startSmoothFlashing(binding.root)
         }
 
         binding.sbTimeOn.setOnSeekBarChangeListener(onChangeTimeOnFlash())
@@ -99,4 +104,6 @@ class FlashLightActivity : BaseActivity<ActivityFlashLightBinding>() {
             flashLightViewModel.updateFlashTypeLight(flash)
         }
     }
+
+
 }
