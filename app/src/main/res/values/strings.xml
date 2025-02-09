@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FlashAlertDB</string>
+    <string name="txt_flash_light">Flash light</string>
+    <string name="txt_flash_calls">Flash calls</string>
+    <string name="txt_flash_sms">Flash SMS</string>
+    <string name="txt_flash_notification">Flash notification</string>
+    <string name="txt_turn_on_flash">Turn on flash</string>
+    <string name="txt_turn_off_flash">Turn off flash</string>
+    <string name="txt_test">Test</string>
+    <string name="txt_apply">Apply</string>
+</resources>
