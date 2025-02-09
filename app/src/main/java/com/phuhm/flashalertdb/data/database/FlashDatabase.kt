@@ -28,7 +28,7 @@ abstract class FlashDatabase : RoomDatabase() {
                     context.applicationContext,
                     FlashDatabase::class.java,
                     Constants.DB_NAME
-                ).allowMainThreadQueries().addCallback(FlashDatabaseCallback()).build()
+                ).allowMainThreadQueries().fallbackToDestructiveMigration().addCallback(FlashDatabaseCallback()).build()
                 INSTANCE = instance
                 instance
             }
